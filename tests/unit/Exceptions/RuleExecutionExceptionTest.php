@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class RuleExecutionExceptionTest extends TestCase
 {
-    private const TEST_VALUE_RULE_CLASS_NAME = 'test_value_rule_class_name';
+    private const TEST_VALUE_RULE_CLASS_NAME = 'rule_class_name';
 
     public function testDefaultCreate(): void
     {
