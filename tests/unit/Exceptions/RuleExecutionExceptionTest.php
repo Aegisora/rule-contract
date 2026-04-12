@@ -22,6 +22,24 @@ class RuleExecutionExceptionTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider getExceptionProvidedData
+     */
+    public function testCreate(
+        array $actualExceptionData,
+        array $expectedExceptionData
+    ): void {
+        self::assertExceptionDataEqualsExpected(
+            new RuleExecutionException(...array_values($actualExceptionData)),
+            $expectedExceptionData
+        );
+    }
+
+    public static function getExceptionProvidedData(): array
+    {
+        return [];
+    }
+
     private static function assertExceptionDataEqualsExpected(
         RuleExecutionException $actualException,
         array $expectedData
