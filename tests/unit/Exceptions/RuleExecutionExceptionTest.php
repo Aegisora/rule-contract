@@ -55,6 +55,20 @@ class RuleExecutionExceptionTest extends TestCase
                     'previous' => $previousException,
                 ],
             ],
+            'rule class name - empty, message - empty, code - zero, previous exception - not set' => [
+                'actualExceptionData' => [
+                    'ruleClassName' => '',
+                    'message' => '',
+                    'code' => 0,
+                    'previous' => null,
+                ],
+                'expectedExceptionData' => [
+                    'ruleClassName' => '',
+                    'message' => '',
+                    'code' => 0,
+                    'previous' => null,
+                ],
+            ],
         ];
     }
 
