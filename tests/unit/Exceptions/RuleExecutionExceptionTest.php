@@ -3,6 +3,7 @@
 namespace Aegisora\RuleContract\tests\unit\Exceptions;
 
 use Aegisora\RuleContract\Exceptions\RuleExecutionException;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
 class RuleExecutionExceptionTest extends TestCase
@@ -37,7 +38,24 @@ class RuleExecutionExceptionTest extends TestCase
 
     public static function getExceptionProvidedData(): array
     {
-        return [];
+        $previousException = new Exception();
+
+        return [
+            'rule class name - not empty, message - not empty, code - not zero, previous exception - set' => [
+                'actualExceptionData' => [
+                    'ruleClassName' => 'foo',
+                    'message' => 'bar',
+                    'code' => 1,
+                    'previous' => $previousException,
+                ],
+                'expectedExceptionData' => [
+                    'ruleClassName' => 'foo',
+                    'message' => 'bar',
+                    'code' => 1,
+                    'previous' => $previousException,
+                ],
+            ],
+        ];
     }
 
     private static function assertExceptionDataEqualsExpected(
