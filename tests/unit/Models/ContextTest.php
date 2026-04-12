@@ -46,6 +46,14 @@ class ContextTest extends TestCase
                     'value' => '',
                 ],
             ],
+            'value - integer not zero' => [
+                'actual' => [
+                    'value' => 123,
+                ],
+                'expected' => [
+                    'value' => 123,
+                ],
+            ],
         ];
     }
 
