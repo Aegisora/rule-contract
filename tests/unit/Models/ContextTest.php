@@ -29,7 +29,16 @@ class ContextTest extends TestCase
 
     public static function getContextProvidedData(): array
     {
-        return [];
+        return [
+            'value - not empty string' => [
+                'actual' => [
+                    'value' => 'foo',
+                ],
+                'expected' => [
+                    'value' => 'foo',
+                ],
+            ],
+        ];
     }
 
     private static function assertContextDataEqualsExpected(
