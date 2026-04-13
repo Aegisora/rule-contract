@@ -136,6 +136,14 @@ class ContextTest extends TestCase
                     'value' => [],
                 ],
             ],
+            'value - object' => [
+                'actual' => [
+                    'value' => new stdClass(),
+                ],
+                'expected' => [
+                    'value' => new stdClass(),
+                ],
+            ],
         ];
     }
 
