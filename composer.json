@@ -2,6 +2,7 @@
     "name": "aegisora/rule-contract",
     "description": "Contracts for rule-based validation",
     "type": "library",
+    "keywords": ["rules", "contracts", "validation", "php"],
     "authors": [
         {
             "name": "Arslan Imamutdinov",
