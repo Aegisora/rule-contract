@@ -62,6 +62,14 @@ class ContextTest extends TestCase
                     'value' => 0,
                 ],
             ],
+            'value - integer negative' => [
+                'actual' => [
+                    'value' => -123,
+                ],
+                'expected' => [
+                    'value' => -123,
+                ],
+            ],
             'value - float not zero' => [
                 'actual' => [
                     'value' => 123.123,
@@ -76,6 +84,14 @@ class ContextTest extends TestCase
                 ],
                 'expected' => [
                     'value' => 0.0,
+                ],
+            ],
+            'value - float negative' => [
+                'actual' => [
+                    'value' => -0.01,
+                ],
+                'expected' => [
+                    'value' => -0.01,
                 ],
             ],
         ];
