@@ -128,6 +128,14 @@ class ContextTest extends TestCase
                     'value' => ['foo', '', 0, 123, -123, null, 123.123, 0.0, -123.123, true, false, new stdClass(),],
                 ],
             ],
+            'value - empty array' => [
+                'actual' => [
+                    'value' => [],
+                ],
+                'expected' => [
+                    'value' => [],
+                ],
+            ],
         ];
     }
 
