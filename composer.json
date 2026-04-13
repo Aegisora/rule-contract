@@ -1,5 +1,6 @@
 {
     "name": "aegisora/rule-contract",
+    "description": "Contracts for rule-based validation",
     "authors": [
         {
             "name": "Arslan Imamutdinov",
