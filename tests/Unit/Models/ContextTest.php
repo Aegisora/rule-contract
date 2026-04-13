@@ -4,6 +4,7 @@ namespace Aegisora\RuleContract\Tests\Unit\Models;
 
 use Aegisora\RuleContract\Models\Context;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 
 class ContextTest extends TestCase
 {
@@ -117,6 +118,14 @@ class ContextTest extends TestCase
                 ],
                 'expected' => [
                     'value' => false,
+                ],
+            ],
+            'value - not empty array' => [
+                'actual' => [
+                    'value' => ['foo', '', 0, 123, -123, null, 123.123, 0.0, -123.123, true, false, new stdClass(),],
+                ],
+                'expected' => [
+                    'value' => ['foo', '', 0, 123, -123, null, 123.123, 0.0, -123.123, true, false, new stdClass(),],
                 ],
             ],
         ];
