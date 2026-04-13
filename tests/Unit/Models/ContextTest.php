@@ -62,6 +62,22 @@ class ContextTest extends TestCase
                     'value' => 0,
                 ],
             ],
+            'value - float not zero' => [
+                'actual' => [
+                    'value' => 123.123,
+                ],
+                'expected' => [
+                    'value' => 123.123,
+                ],
+            ],
+            'value - float zero' => [
+                'actual' => [
+                    'value' => 0.0,
+                ],
+                'expected' => [
+                    'value' => 0.0,
+                ],
+            ],
         ];
     }
 
