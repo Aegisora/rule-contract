@@ -4,6 +4,10 @@
     "type": "library",
     "keywords": ["rules", "contracts", "validation", "php"],
     "homepage": "https://github.com/Aegisora/rule-contract",
+    "support": {
+        "issues": "https://github.com/Aegisora/rule-contract/issues",
+        "source": "https://github.com/Aegisora/rule-contract"
+    },
     "authors": [
         {
             "name": "Arslan Imamutdinov",
