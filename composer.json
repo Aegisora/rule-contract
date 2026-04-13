@@ -22,7 +22,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Aegisora\\RuleContract\\tests\\": "tests/"
+            "Aegisora\\RuleContract\\Tests\\": "tests/"
         }
     }
 }

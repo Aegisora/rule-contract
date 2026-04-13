@@ -1,6 +1,6 @@
 <?php
 
-namespace Aegisora\RuleContract\tests\unit\Exceptions;
+namespace Aegisora\RuleContract\Tests\Unit\Exceptions;
 
 use Aegisora\RuleContract\Exceptions\RuleExecutionException;
 use Exception;
