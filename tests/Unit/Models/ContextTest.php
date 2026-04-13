@@ -94,6 +94,22 @@ class ContextTest extends TestCase
                     'value' => -0.01,
                 ],
             ],
+            'value - boolean true' => [
+                'actual' => [
+                    'value' => true,
+                ],
+                'expected' => [
+                    'value' => true,
+                ],
+            ],
+            'value - boolean false' => [
+                'actual' => [
+                    'value' => false,
+                ],
+                'expected' => [
+                    'value' => false,
+                ],
+            ],
         ];
     }
 
