@@ -15,6 +15,11 @@ class Result
         $this->failedRuleCode = $failedRuleCode;
     }
 
+    public static function valid(): self
+    {
+        return new self(true);
+    }
+
     public function isValid(): bool
     {
         return $this->isValid;
