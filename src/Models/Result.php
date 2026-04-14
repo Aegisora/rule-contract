@@ -20,6 +20,11 @@ class Result
         return new self(true);
     }
 
+    public static function invalid(string $failedRuleCode): self
+    {
+        return new self(false, $failedRuleCode);
+    }
+
     public function isValid(): bool
     {
         return $this->isValid;
