@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1776184781">
-  <project timestamp="1776184781">
+<coverage generated="1776184918">
+  <project timestamp="1776184918">
     <file name="/home/runner/work/rule-contract/rule-contract/src/Exceptions/InvalidRuleContextException.php">
       <class name="Aegisora\RuleContract\Exceptions\InvalidRuleContextException" namespace="global">
         <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
@@ -38,10 +38,17 @@
     </file>
     <file name="/home/runner/work/rule-contract/rule-contract/src/Models/Result.php">
       <class name="Aegisora\RuleContract\Models\Result" namespace="global">
-        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="7" coveredelements="0"/>
       </class>
-      <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="18" type="method" name="isValid" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <line num="23" type="method" name="getFailedRuleCode" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="25" type="stmt" count="0"/>
+      <metrics loc="28" ncloc="28" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="7" coveredelements="0"/>
     </file>
-    <metrics files="5" loc="91" ncloc="79" classes="2" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="11" coveredelements="11"/>
+    <metrics files="5" loc="111" ncloc="99" classes="3" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="6" elements="18" coveredelements="11"/>
   </project>
 </coverage>
