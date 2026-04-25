@@ -31,7 +31,6 @@ class ContextTest extends TestCase
     public static function getContextProvidedData(): array
     {
         return [
-
             'value - null' => [
                 'actual' => [
                     'value' => null,
