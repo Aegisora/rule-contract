@@ -50,6 +50,15 @@ class RuleTest extends TestCase
         }
     }
 
+    public function testGetDefaultValidResult(): void
+    {
+        $rule = new DefaultValidResultTestRule();
+        $result = $rule->validate(Context::create(null));
+
+        $this->assertTrue($result->isValid());
+        $this->assertNull($result->getFailedRuleCode());
+    }
+
     public function testGetDefaultInvalidResult(): void
     {
         $rule = new DefaultInvalidResultTestRule();
