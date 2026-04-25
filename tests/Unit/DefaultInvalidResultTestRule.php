@@ -1,6 +1,6 @@
 <?php
 
-namespace Aegisora\RuleContract\tests\Unit;
+namespace Aegisora\RuleContract\Tests\Unit;
 
 use Aegisora\RuleContract\Models\Context;
 use Aegisora\RuleContract\Models\Result;
