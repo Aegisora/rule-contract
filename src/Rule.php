@@ -34,6 +34,11 @@ abstract class Rule implements RuleInterface
         }
     }
 
+    protected function getDefaultInvalidResult(): Result
+    {
+        return Result::invalid($this->getDefaultCode());
+    }
+
     protected function getDefaultCode(): string
     {
         $shortClassName = (new ReflectionClass($this))->getShortName();
