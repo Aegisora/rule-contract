@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1777121879">
-  <project timestamp="1777121879">
+<coverage generated="1777122170">
+  <project timestamp="1777122170">
     <file name="/home/runner/work/rule-contract/rule-contract/src/Exceptions/InvalidRuleContextException.php">
       <class name="Aegisora\RuleContract\Exceptions\InvalidRuleContextException" namespace="global">
         <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
@@ -38,21 +38,21 @@
     </file>
     <file name="/home/runner/work/rule-contract/rule-contract/src/Models/Result.php">
       <class name="Aegisora\RuleContract\Models\Result" namespace="global">
-        <metrics complexity="5" methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="4" elements="11" coveredelements="7"/>
+        <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="11" coveredelements="11"/>
       </class>
-      <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="14" type="stmt" count="4"/>
-      <line num="15" type="stmt" count="4"/>
-      <line num="18" type="method" name="valid" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="20" type="stmt" count="0"/>
-      <line num="23" type="method" name="invalid" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="25" type="stmt" count="0"/>
-      <line num="28" type="method" name="isValid" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="30" type="stmt" count="4"/>
-      <line num="33" type="method" name="getFailedRuleCode" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="35" type="stmt" count="4"/>
-      <metrics loc="38" ncloc="38" classes="1" methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="4" elements="11" coveredelements="7"/>
+      <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="14" type="stmt" count="7"/>
+      <line num="15" type="stmt" count="7"/>
+      <line num="18" type="method" name="valid" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="20" type="stmt" count="1"/>
+      <line num="23" type="method" name="invalid" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="25" type="stmt" count="2"/>
+      <line num="28" type="method" name="isValid" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="30" type="stmt" count="7"/>
+      <line num="33" type="method" name="getFailedRuleCode" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="35" type="stmt" count="7"/>
+      <metrics loc="38" ncloc="38" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="11" coveredelements="11"/>
     </file>
-    <metrics files="5" loc="121" ncloc="109" classes="3" methods="10" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="10" elements="22" coveredelements="18"/>
+    <metrics files="5" loc="121" ncloc="109" classes="3" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="22" coveredelements="22"/>
   </project>
 </coverage>
