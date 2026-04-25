@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1777122170">
-  <project timestamp="1777122170">
+<coverage generated="1777122388">
+  <project timestamp="1777122388">
     <file name="/home/runner/work/rule-contract/rule-contract/src/Exceptions/InvalidRuleContextException.php">
       <class name="Aegisora\RuleContract\Exceptions\InvalidRuleContextException" namespace="global">
         <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
@@ -53,6 +53,9 @@
       <line num="35" type="stmt" count="7"/>
       <metrics loc="38" ncloc="38" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="11" coveredelements="11"/>
     </file>
-    <metrics files="5" loc="121" ncloc="109" classes="3" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="22" coveredelements="22"/>
+    <file name="/home/runner/work/rule-contract/rule-contract/src/RuleInterface.php">
+      <metrics loc="18" ncloc="14" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <metrics files="6" loc="139" ncloc="123" classes="3" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="22" coveredelements="22"/>
   </project>
 </coverage>
