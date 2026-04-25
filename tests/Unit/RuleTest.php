@@ -5,6 +5,7 @@ namespace Aegisora\RuleContract\Tests\Unit;
 use Aegisora\RuleContract\Exceptions\InvalidRuleContextException;
 use Aegisora\RuleContract\Exceptions\RuleExecutionException;
 use Aegisora\RuleContract\Models\Context;
+use Exception;
 use PHPUnit\Framework\TestCase;
 
 class RuleTest extends TestCase
@@ -28,6 +29,23 @@ class RuleTest extends TestCase
             $rule->validate(Context::create(null));
         } catch (RuleExecutionException $exception) {
             $this->assertEquals(RuleExecutionExceptionTestRule::class, $exception->getRuleClassName());
+            throw $exception;
+        }
+    }
+
+    public function testThrowable(): void
+    {
+        $rule = new ThrowableTestRule();
+
+        $this->expectException(RuleExecutionException::class);
+
+        try {
+            $rule->validate(Context::create(null));
+        } catch (RuleExecutionException $exception) {
+            $this->assertEquals(ThrowableTestRule::class, $exception->getRuleClassName());
+            $this->assertEquals('throwable_test_rule_exception_message', $exception->getMessage());
+            $this->assertEquals(0, $exception->getCode());
+            $this->assertEquals(new Exception('throwable_test_rule_exception_message'), $exception->getPrevious());
             throw $exception;
         }
     }
