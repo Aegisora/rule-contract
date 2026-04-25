@@ -13,6 +13,40 @@ class ResultTest extends TestCase
     }
 
     /**
+     * @dataProvider getInvalidResultProvidedData
+     */
+    public function testInvalid(
+        array $actual,
+        array $expected
+    ): void {
+        self::assertResultDataEqualsExpected(Result::invalid(...array_values($actual)), $expected);
+    }
+
+    public static function getInvalidResultProvidedData(): array
+    {
+        return [
+            'failed rule code - not empty string' => [
+                'actual' => [
+                    'failedRuleCode' => 'foo',
+                ],
+                'expected' => [
+                    'isValid' => false,
+                    'failedRuleCode' => 'foo',
+                ],
+            ],
+            'failed rule code - empty string' => [
+                'actual' => [
+                    'failedRuleCode' => '',
+                ],
+                'expected' => [
+                    'isValid' => false,
+                    'failedRuleCode' => '',
+                ],
+            ],
+        ];
+    }
+
+    /**
      * @dataProvider getResultProvidedData
      */
     public function testCreateNew(
