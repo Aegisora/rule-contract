@@ -34,6 +34,11 @@ abstract class Rule implements RuleInterface
         }
     }
 
+    protected function getDefaultValidResult(): Result
+    {
+        return Result::valid();
+    }
+
     protected function getDefaultInvalidResult(): Result
     {
         return Result::invalid($this->getDefaultCode());
