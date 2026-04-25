@@ -6,10 +6,13 @@ use Aegisora\RuleContract\Exceptions\RuleException;
 use Aegisora\RuleContract\Exceptions\RuleExecutionException;
 use Aegisora\RuleContract\Models\Context;
 use Aegisora\RuleContract\Models\Result;
+use ReflectionClass;
 use Throwable;
 
 abstract class Rule implements RuleInterface
 {
+    private const DEFAULT_CODE = 'rule';
+
     /**
      * @throws RuleException
      */
@@ -29,5 +32,13 @@ abstract class Rule implements RuleInterface
                 $exception
             );
         }
+    }
+
+    protected function getDefaultCode(): string
+    {
+        $shortClassName = (new ReflectionClass($this))->getShortName();
+        $shortClassNameInSnakeCase = preg_replace('/(?<!^)[A-Z]/', '_$0', $shortClassName);
+
+        return !is_null($shortClassNameInSnakeCase) ? strtolower($shortClassNameInSnakeCase) : self::DEFAULT_CODE;
     }
 }
