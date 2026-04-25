@@ -7,6 +7,11 @@ use PHPUnit\Framework\TestCase;
 
 class ResultTest extends TestCase
 {
+    public function testValid(): void
+    {
+        self::assertResultDataEqualsExpected(Result::valid(), ['isValid' => true, 'failedRuleCode' => null,]);
+    }
+
     /**
      * @dataProvider getResultProvidedData
      */
