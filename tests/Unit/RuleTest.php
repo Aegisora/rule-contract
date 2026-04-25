@@ -28,7 +28,7 @@ class RuleTest extends TestCase
         try {
             $rule->validate(Context::create(null));
         } catch (RuleExecutionException $exception) {
-            $this->assertEquals(RuleExecutionExceptionTestRule::class, $exception->getRuleClassName());
+            self::assertEquals(RuleExecutionExceptionTestRule::class, $exception->getRuleClassName());
             throw $exception;
         }
     }
@@ -42,10 +42,10 @@ class RuleTest extends TestCase
         try {
             $rule->validate(Context::create(null));
         } catch (RuleExecutionException $exception) {
-            $this->assertEquals(ThrowableTestRule::class, $exception->getRuleClassName());
-            $this->assertEquals('throwable_test_rule_exception_message', $exception->getMessage());
-            $this->assertEquals(0, $exception->getCode());
-            $this->assertEquals(new Exception('throwable_test_rule_exception_message'), $exception->getPrevious());
+            self::assertEquals(ThrowableTestRule::class, $exception->getRuleClassName());
+            self::assertEquals('throwable_test_rule_exception_message', $exception->getMessage());
+            self::assertEquals(0, $exception->getCode());
+            self::assertEquals(new Exception('throwable_test_rule_exception_message'), $exception->getPrevious());
             throw $exception;
         }
     }
@@ -53,18 +53,20 @@ class RuleTest extends TestCase
     public function testGetDefaultValidResult(): void
     {
         $rule = new DefaultValidResultTestRule();
+
         $result = $rule->validate(Context::create(null));
 
-        $this->assertTrue($result->isValid());
-        $this->assertNull($result->getFailedRuleCode());
+        self::assertTrue($result->isValid());
+        self::assertNull($result->getFailedRuleCode());
     }
 
     public function testGetDefaultInvalidResult(): void
     {
         $rule = new DefaultInvalidResultTestRule();
+
         $result = $rule->validate(Context::create(null));
 
-        $this->assertFalse($result->isValid());
-        $this->assertEquals('default_invalid_result_test_rule', $result->getFailedRuleCode());
+        self::assertFalse($result->isValid());
+        self::assertEquals('default_invalid_result_test_rule', $result->getFailedRuleCode());
     }
 }
