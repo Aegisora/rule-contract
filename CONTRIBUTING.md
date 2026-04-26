@@ -108,7 +108,7 @@ All tasks follow the format:
 
 Example:
 
-* AEGISORA-123
+* `AEGISORA-123`
 
 ---
 
@@ -120,8 +120,8 @@ Branch names are strictly equal to the task ID:
 
 Examples:
 
-* AEGISORA-123
-* AEGISORA-456
+* `AEGISORA-123`
+* `AEGISORA-456`
 
 No prefixes, suffixes, or additional text are allowed.
 
@@ -152,8 +152,8 @@ All commits must start with the task identifier:
 
 Examples:
 
-* [AEGISORA-123] add login endpoint
-* [AEGISORA-456] fix null pointer exception
+* `[AEGISORA-123] add login endpoint`
+* `[AEGISORA-456] fix null pointer exception`
 
 ---
 
