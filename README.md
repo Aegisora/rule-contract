@@ -84,6 +84,8 @@ if ($result->isValid()) {
 
 ## 🏛️ Architecture
 
+---
+
 ### RuleInterface
 
 Defines the contract for all rules:
@@ -93,6 +95,8 @@ May throw:
 - `InvalidRuleContextException`
 - `RuleException`
 - `RuleExecutionException`
+
+---
 
 ### Rule (Abstract Class)
 
@@ -116,6 +120,8 @@ Base implementation that provides:
    - `Throwable` → wrapped into `RuleExecutionException`
 4. `Result` is returned
 
+---
+
 ### Context
 
 Encapsulates input data for rule execution.
@@ -125,6 +131,8 @@ Encapsulates input data for rule execution.
 - provides `getValue()` access
 
 Used to decouple rules from application structures.
+
+---
 
 ### Result
 
@@ -137,6 +145,8 @@ Structure
 Factory methods
 - `Result::valid()`
 - `Result::invalid('rule_code')`
+
+---
 
 ### Exception Handling
 
@@ -155,6 +165,8 @@ Thrown when unexpected runtime error occurs during rule execution.
 Contains:
 - rule class name (getRuleClassName())
 - original exception
+
+---
 
 ### Design Principles
 
