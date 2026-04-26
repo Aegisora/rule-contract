@@ -1,8 +1,8 @@
 {
     "name": "aegisora/rule-contract",
-    "description": "Contracts for rule-based validation",
+    "description": "Contracts for rule-based validation in Aegisora ecosystem",
     "type": "library",
-    "keywords": ["rules", "contracts", "validation", "php"],
+    "keywords": ["rules", "contracts", "validation", "php", "aegisora", "aegisora-ecosystem", "rule-contract"],
     "homepage": "https://github.com/Aegisora/rule-contract",
     "support": {
         "issues": "https://github.com/Aegisora/rule-contract/issues",
