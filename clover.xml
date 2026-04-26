@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1777126415">
-  <project timestamp="1777126415">
+<coverage generated="1777199412">
+  <project timestamp="1777199412">
     <file name="/home/runner/work/rule-contract/rule-contract/src/Exceptions/InvalidRuleContextException.php">
       <class name="Aegisora\RuleContract\Exceptions\InvalidRuleContextException" namespace="global">
         <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
