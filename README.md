@@ -150,20 +150,20 @@ Factory methods
 
 ### Exception Handling
 
-#### RuleException
+#### `RuleException`
 
 Base exception for all rule-related errors.
 
-#### InvalidRuleContextException
+#### `InvalidRuleContextException`
 
 Thrown when context is invalid for a rule.
 
-#### RuleExecutionException
+#### `RuleExecutionException`
 
 Thrown when unexpected runtime error occurs during rule execution.
 
 Contains:
-- rule class name (getRuleClassName())
+- rule class name (`getRuleClassName()`)
 - original exception
 
 ---
