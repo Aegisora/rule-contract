@@ -38,9 +38,9 @@ composer require aegisora/rule-contract
 ## 🚀 Core Concept
 
 Each rule:
-- receives a Context
+- receives a `Context`
 - performs validation logic
-- returns a Result
+- returns a `Result`
 - never returns raw booleans
 - never throws unstructured exceptions
 
