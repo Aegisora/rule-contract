@@ -104,7 +104,7 @@ Base implementation that provides:
 - Default helpers
   - `getDefaultValidResult()`
   - `getDefaultInvalidResult()`
-- Automatic rule code generation - generates snake_case code from class name:
+- Automatic rule code generation - generates `snake_case` code from class name:
   - `UserAgeRule` → `user_age_rule`
 
 #### Execution Flow
