@@ -97,18 +97,15 @@ May throw:
 ### Rule (Abstract Class)
 
 Base implementation that provides:
-
-Safe execution layer
-- wraps execution in `try/catch`
-- rethrows domain exceptions as-is
-- wraps unexpected errors into `RuleExecutionException`
-
-Default helpers
-- `getDefaultValidResult()`
-- `getDefaultInvalidResult()`
-
-Automatic rule code generation - generates snake_case code from class name:
-- `UserAgeRule` → `user_age_rule`
+- Safe execution layer
+  - wraps execution in `try/catch`
+  - rethrows domain exceptions as-is
+  - wraps unexpected errors into `RuleExecutionException`
+- Default helpers
+  - `getDefaultValidResult()`
+  - `getDefaultInvalidResult()`
+- Automatic rule code generation - generates snake_case code from class name:
+  - `UserAgeRule` → `user_age_rule`
 
 #### Execution Flow
 
