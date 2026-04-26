@@ -109,12 +109,12 @@ Base implementation that provides:
 
 #### Execution Flow
 
-1. validate() is called
-2. executeValidate() runs
+1. `validate()` is called
+2. `executeValidate()` runs
 3. Result handling:
-   - RuleException → rethrown
-   - Throwable → wrapped into RuleExecutionException
-4. Result is returned
+   - `RuleException` → rethrown
+   - `Throwable` → wrapped into `RuleExecutionException`
+4. `Result` is returned
 
 ### Context
 
