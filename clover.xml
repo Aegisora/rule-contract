@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1777207568">
-  <project timestamp="1777207568">
+<coverage generated="1786716282">
+  <project timestamp="1786716282">
     <file name="/home/runner/work/rule-contract/rule-contract/src/Exceptions/InvalidRuleContextException.php">
       <class name="Aegisora\RuleContract\Exceptions\InvalidRuleContextException" namespace="global">
         <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
@@ -28,12 +28,12 @@
       <class name="Aegisora\RuleContract\Models\Context" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
       </class>
-      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="33"/>
-      <line num="18" type="stmt" count="33"/>
-      <line num="24" type="method" name="create" visibility="public" complexity="1" crap="1" count="19"/>
-      <line num="27" type="stmt" count="19"/>
-      <line num="33" type="method" name="getValue" visibility="public" complexity="1" crap="1" count="28"/>
-      <line num="35" type="stmt" count="28"/>
+      <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="40"/>
+      <line num="18" type="stmt" count="40"/>
+      <line num="24" type="method" name="create" visibility="public" complexity="1" crap="1" count="26"/>
+      <line num="27" type="stmt" count="26"/>
+      <line num="33" type="method" name="getValue" visibility="public" complexity="1" crap="1" count="30"/>
+      <line num="35" type="stmt" count="30"/>
       <metrics loc="38" ncloc="26" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
     </file>
     <file name="/home/runner/work/rule-contract/rule-contract/src/Models/Result.php">
@@ -52,6 +52,49 @@
       <line num="33" type="method" name="getFailedRuleCode" visibility="public" complexity="1" crap="1" count="9"/>
       <line num="35" type="stmt" count="9"/>
       <metrics loc="38" ncloc="38" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="11" coveredelements="11"/>
+    </file>
+    <file name="/home/runner/work/rule-contract/rule-contract/src/Models/RuleContext.php">
+      <class name="Aegisora\RuleContract\Models\RuleContext" namespace="global">
+        <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="11" coveredelements="11"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="16" type="stmt" count="7"/>
+      <line num="17" type="stmt" count="7"/>
+      <line num="20" type="method" name="create" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="27" type="method" name="getRule" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="29" type="stmt" count="2"/>
+      <line num="35" type="method" name="getContextValue" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="37" type="stmt" count="2"/>
+      <line num="40" type="method" name="getContext" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="42" type="stmt" count="2"/>
+      <metrics loc="45" ncloc="42" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="11" coveredelements="11"/>
+    </file>
+    <file name="/home/runner/work/rule-contract/rule-contract/src/Models/RuleContextCollection.php">
+      <class name="Aegisora\RuleContract\Models\RuleContextCollection" namespace="global">
+        <metrics complexity="10" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="20" coveredelements="20"/>
+      </class>
+      <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="23" type="stmt" count="8"/>
+      <line num="26" type="method" name="create" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="29" type="stmt" count="2"/>
+      <line num="35" type="method" name="toArray" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="37" type="stmt" count="4"/>
+      <line num="40" type="method" name="current" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="42" type="stmt" count="3"/>
+      <line num="45" type="method" name="key" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="47" type="stmt" count="4"/>
+      <line num="50" type="method" name="next" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="52" type="stmt" count="3"/>
+      <line num="55" type="method" name="rewind" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="57" type="stmt" count="4"/>
+      <line num="60" type="method" name="valid" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="62" type="stmt" count="4"/>
+      <line num="65" type="method" name="count" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="67" type="stmt" count="4"/>
+      <line num="70" type="method" name="isEmpty" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="72" type="stmt" count="4"/>
+      <metrics loc="75" ncloc="66" classes="1" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="20" coveredelements="20"/>
     </file>
     <file name="/home/runner/work/rule-contract/rule-contract/src/Rule.php">
       <class name="Aegisora\RuleContract\Rule" namespace="global">
@@ -81,6 +124,6 @@
     <file name="/home/runner/work/rule-contract/rule-contract/src/RuleInterface.php">
       <metrics loc="20" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="7" loc="196" ncloc="176" classes="4" methods="14" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="41" coveredelements="41"/>
+    <metrics files="9" loc="316" ncloc="284" classes="6" methods="29" coveredmethods="29" conditionals="0" coveredconditionals="0" statements="43" coveredstatements="43" elements="72" coveredelements="72"/>
   </project>
 </coverage>

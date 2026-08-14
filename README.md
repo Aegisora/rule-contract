@@ -1,5 +1,7 @@
 # Aegisora Rule Contract
 
+[![Latest Version](https://img.shields.io/packagist/v/aegisora/rule-contract?style=flat-square)](https://packagist.org/packages/aegisora/rule-contract)
+[![Total Downloads](https://img.shields.io/packagist/dt/aegisora/rule-contract?style=flat-square)](https://packagist.org/packages/aegisora/rule-contract)
 ![Code Coverage Badge](./badge.svg)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 ![PHPStan Badge](https://img.shields.io/badge/PHPStan-level%209-brightgreen.svg?style=flat)
@@ -19,6 +21,7 @@ It provides:
 - 🔹 Lightweight, framework-agnostic design and dependency-free
 - 🔹 Stable contract for validation rules
 - 🔹 Unified validation result structure
+- 🔹 Immutable rule–context binding and type-safe collection
 - 🔹 Safe exception handling with execution wrapping
 - 🔹 Automatic rule code generation
 - 🔹 Supports both simple and complex rules
@@ -145,6 +148,46 @@ Structure
 Factory methods
 - `Result::valid()`
 - `Result::invalid('rule_code')`
+
+---
+
+### RuleContext
+
+Immutable binding of a rule and the context it should be validated against.
+
+`RuleContext::create($rule, $context);`
+- stores a `RuleInterface` and a `Context`
+- provides `getRule(): RuleInterface`
+- provides `getContext(): Context`
+- provides `getContextValue()` shortcut for `getContext()->getValue()`
+
+Useful for passing around a rule together with its input as a single unit.
+
+---
+
+### RuleContextCollection
+
+Immutable, type-safe collection of `RuleContext` objects.
+
+`RuleContextCollection::create($ruleContext1, $ruleContext2, ...);`
+- accepts only `RuleContext` instances (enforced via variadic type hint)
+- implements `Iterator` — can be traversed with `foreach`
+- implements `Countable` — usable with `count()`
+- provides `toArray(): RuleContext[]`
+- provides `count(): int`
+- provides `isEmpty(): bool`
+
+```php
+$collection = RuleContextCollection::create(
+    RuleContext::create($ruleA, Context::create($valueA)),
+    RuleContext::create($ruleB, Context::create($valueB)),
+);
+
+foreach ($collection as $ruleContext) {
+    $result = $ruleContext->getRule()->validate($ruleContext->getContext());
+    // ...
+}
+```
 
 ---
 
