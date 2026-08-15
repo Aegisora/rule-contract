@@ -161,7 +161,16 @@ Immutable binding of a rule and the context it should be validated against.
 - provides `getContext(): Context`
 - provides `getContextValue()` shortcut for `getContext()->getValue()`
 
+`RuleContext::createFromValue($rule, $value);`
+- shortcut that wraps a raw `mixed` `$value` into a `Context` internally
+- equivalent to `RuleContext::create($rule, Context::create($value))`
+
 Useful for passing around a rule together with its input as a single unit.
+
+```php
+$ruleContext = RuleContext::createFromValue($rule, 20);
+$result = $ruleContext->getRule()->validate($ruleContext->getContext());
+```
 
 ---
 
