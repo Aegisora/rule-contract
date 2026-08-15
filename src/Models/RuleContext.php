@@ -17,6 +17,19 @@ class RuleContext
         $this->context = $context;
     }
 
+    /**
+     * @param mixed $value
+     */
+    public static function createFromValue(
+        RuleInterface $rule,
+        $value
+    ): self {
+        return self::create(
+            $rule,
+            Context::create($value)
+        );
+    }
+
     public static function create(
         RuleInterface $rule,
         Context $context
